@@ -31,12 +31,8 @@ test.describe('Skills Assessment Platform - Complete Flow', () => {
   test('should select a challenge and enable proceed button', async ({ page }) => {
     await page.goto('/');
 
-    // Click on Development Challenge card
-    const developmentCard = page.locator('div.card').filter({ hasText: 'Development Challenge' }).first();
-    await developmentCard.click();
-
-    // Wait for selection to register
-    await page.waitForTimeout(500);
+    // Click on Development Challenge card using test ID
+    await page.getByTestId('challenge-development').click();
 
     // Check proceed button is now enabled
     const proceedButton = page.getByRole('button', { name: 'Proceed to Submission' });
@@ -47,9 +43,7 @@ test.describe('Skills Assessment Platform - Complete Flow', () => {
     await page.goto('/');
 
     // Select Development Challenge
-    const developmentCard = page.locator('div.card').filter({ hasText: 'Development Challenge' }).first();
-    await developmentCard.click();
-    await page.waitForTimeout(500);
+    await page.getByTestId('challenge-development').click();
 
     // Click proceed button
     await page.getByRole('button', { name: 'Proceed to Submission' }).click();
@@ -87,9 +81,7 @@ test.describe('Skills Assessment Platform - Complete Flow', () => {
     await page.goto('/');
 
     // Select Development Challenge
-    const developmentCard = page.locator('div.card').filter({ hasText: 'Development Challenge' }).first();
-    await developmentCard.click();
-    await page.waitForTimeout(500);
+    await page.getByTestId('challenge-development').click();
 
     // Proceed to submission
     await page.getByRole('button', { name: 'Proceed to Submission' }).click();

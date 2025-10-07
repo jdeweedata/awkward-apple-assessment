@@ -109,12 +109,21 @@ export default function Home() {
                   return (
                     <div
                       key={challenge.id}
+                      data-testid={`challenge-${challenge.id}`}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Select ${challenge.title}`}
                       className={`card cursor-pointer transition-all duration-200 ${
                         isSelected 
                           ? 'ring-2 ring-primary border-primary' 
                           : 'hover:shadow-md hover:border-gray-300'
                       }`}
                       onClick={() => setSelectedChallenge(challenge.id)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          setSelectedChallenge(challenge.id)
+                        }
+                      }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <div className={`p-2 rounded-lg ${isSelected ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'}`}>

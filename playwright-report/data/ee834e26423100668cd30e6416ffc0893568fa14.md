@@ -1,0 +1,122 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - heading "Skills Assessment Platform" [level=1] [ref=e5]
+    - paragraph [ref=e6]: For TK Manenzhe - Digital Designer & Multimedia Expert
+  - generic [ref=e7]:
+    - generic [ref=e9]:
+      - img [ref=e11]
+      - generic [ref=e15]:
+        - heading "Welcome to Your Assessment" [level=2] [ref=e16]
+        - paragraph [ref=e17]: This practical assessment evaluates your skills in digital design, web development, and AI integration based on your 10 years of experience as a Digital Designer and Multimedia Expert.
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: "Estimated Time: 2-4 hours"
+          - paragraph [ref=e23]: Choose one challenge that best showcases your expertise. Take your time to deliver quality work.
+    - generic [ref=e24]:
+      - heading "Choose Your Challenge" [level=2] [ref=e25]
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - img [ref=e30]
+            - heading "Design Challenge" [level=3] [ref=e36]
+          - paragraph [ref=e37]: Create a landing page mockup for a fictional brand launch campaign
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - img [ref=e40]
+              - text: Demonstrate UI/UX design skills
+            - generic [ref=e43]:
+              - img [ref=e44]
+              - text: Showcase brand storytelling abilities
+            - generic [ref=e47]:
+              - img [ref=e48]
+              - text: Optimize for conversion
+            - generic [ref=e51]:
+              - img [ref=e52]
+              - text: Deliver Figma/Adobe XD files
+          - generic [ref=e55]:
+            - paragraph [ref=e56]: "Deliverables:"
+            - paragraph [ref=e57]: Figma/Adobe XD file with mockup, brief design rationale (max 300 words)
+            - generic [ref=e58]:
+              - img [ref=e59]
+              - text: 2-3 hours
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - img [ref=e65]
+            - heading "Development Challenge" [level=3] [ref=e68]
+          - paragraph [ref=e69]: Build a functional mini-application using modern web technologies
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - img [ref=e72]
+              - text: "Choose: Content dashboard, email template generator, or social media scheduler"
+            - generic [ref=e75]:
+              - img [ref=e76]
+              - text: Use React/Next.js with Tailwind CSS
+            - generic [ref=e79]:
+              - img [ref=e80]
+              - text: Implement responsive design
+            - generic [ref=e83]:
+              - img [ref=e84]
+              - text: Follow best practices and clean code principles
+          - generic [ref=e87]:
+            - paragraph [ref=e88]: "Deliverables:"
+            - paragraph [ref=e89]: GitHub repository with live demo link, setup instructions in README
+            - generic [ref=e90]:
+              - img [ref=e91]
+              - text: 3-4 hours
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - img [ref=e97]
+            - heading "AI Integration Challenge" [level=3] [ref=e99]
+          - paragraph [ref=e100]: Develop a small AI-powered tool for digital marketing or content creation
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - img [ref=e103]
+              - text: Integrate AI API (OpenAI, Anthropic, or similar)
+            - generic [ref=e106]:
+              - img [ref=e107]
+              - text: Focus on practical marketing/content use case
+            - generic [ref=e110]:
+              - img [ref=e111]
+              - text: Build intuitive user interface
+            - generic [ref=e114]:
+              - img [ref=e115]
+              - text: Demonstrate API integration skills
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: "Deliverables:"
+            - paragraph [ref=e120]: GitHub repository with working application, API integration documentation
+            - generic [ref=e121]:
+              - img [ref=e122]
+              - text: 3-4 hours
+    - generic [ref=e125]:
+      - generic [ref=e126]:
+        - img [ref=e127]
+        - heading "Assessment Criteria" [level=2] [ref=e130]
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - generic [ref=e133]: 40%
+          - generic [ref=e134]:
+            - heading "Technical Execution" [level=3] [ref=e135]
+            - paragraph [ref=e136]: Quality of implementation and technical choices
+        - generic [ref=e137]:
+          - generic [ref=e138]: 30%
+          - generic [ref=e139]:
+            - heading "Creative Problem-Solving" [level=3] [ref=e140]
+            - paragraph [ref=e141]: Innovation and approach to challenges
+        - generic [ref=e142]:
+          - generic [ref=e143]: 20%
+          - generic [ref=e144]:
+            - heading "Code Quality & Best Practices" [level=3] [ref=e145]
+            - paragraph [ref=e146]: Clean code, documentation, and standards
+        - generic [ref=e147]:
+          - generic [ref=e148]: 10%
+          - generic [ref=e149]:
+            - heading "Attention to Detail & Polish" [level=3] [ref=e150]
+            - paragraph [ref=e151]: Refinement and professional finish
+    - generic [ref=e152]:
+      - button "Proceed to Submission" [disabled] [ref=e153]
+      - paragraph [ref=e154]: Please select a challenge to continue
+```

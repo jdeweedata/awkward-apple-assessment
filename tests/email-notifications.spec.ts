@@ -86,9 +86,7 @@ test.describe('Email Notifications - Assessor Testing', () => {
     // First submission
     await page.goto('/');
     
-    const aiCard = page.locator('div.card').filter({ hasText: 'AI Integration Challenge' }).first();
-    await aiCard.click();
-    await page.waitForTimeout(500);
+    await page.getByTestId('challenge-ai').click();
     await page.getByRole('button', { name: 'Proceed to Submission' }).click();
 
     await page.getByLabel('Full Name').fill('First Candidate');
@@ -107,9 +105,7 @@ test.describe('Email Notifications - Assessor Testing', () => {
     await page.waitForTimeout(1000);
 
     // Second submission
-    const designCard = page.locator('div.card').filter({ hasText: 'Design Challenge' }).first();
-    await designCard.click();
-    await page.waitForTimeout(500);
+    await page.getByTestId('challenge-design').click();
     await page.getByRole('button', { name: 'Proceed to Submission' }).click();
 
     await page.getByLabel('Full Name').fill('Second Candidate');
