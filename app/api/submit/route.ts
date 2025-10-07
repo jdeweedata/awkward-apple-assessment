@@ -7,11 +7,15 @@ export const dynamic = 'force-dynamic'
 
 export async function POST(request: NextRequest) {
   try {
+    console.log('📝 Submission API called')
     const body = await request.json()
+    console.log('📦 Request body:', { ...body, description: body.description?.substring(0, 50) + '...' })
+    
     const { name, email, challenge, submissionUrl, description, timeSpent } = body
 
     // Validate required fields
     if (!name || !email || !challenge || !submissionUrl || !description || !timeSpent) {
+      console.log('❌ Validation failed: Missing required fields')
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -48,6 +52,7 @@ export async function POST(request: NextRequest) {
       submitted_at: new Date().toISOString(),
     }
 
+    console.log('💾 Saving to Supabase...')
     const { data, error } = await supabase
       .from('submissions')
       .insert([submission])
@@ -55,14 +60,17 @@ export async function POST(request: NextRequest) {
       .single()
 
     if (error) {
-      console.error('Supabase error:', error)
+      console.error('❌ Supabase error:', error)
       return NextResponse.json(
-        { error: 'Failed to store submission' },
+        { error: 'Failed to store submission', details: error.message },
         { status: 500 }
       )
     }
+    
+    console.log('✅ Saved to Supabase:', data.id)
 
     // Send emails
+    console.log('📧 Sending emails...')
     try {
       await Promise.all([
         sendConfirmationEmail({
@@ -82,12 +90,14 @@ export async function POST(request: NextRequest) {
           timeSpent,
         }),
       ])
+      console.log('✅ Emails sent successfully')
     } catch (emailError) {
-      console.error('Email error:', emailError)
+      console.error('⚠️ Email error (non-fatal):', emailError)
       // Don't fail the request if emails fail
       // The submission is already stored
     }
 
+    console.log('🎉 Submission complete!')
     return NextResponse.json(
       { 
         success: true, 
