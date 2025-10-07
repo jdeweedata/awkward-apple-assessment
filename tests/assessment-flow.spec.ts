@@ -64,9 +64,7 @@ test.describe('Skills Assessment Platform - Complete Flow', () => {
     await page.goto('/');
 
     // Select and proceed to form
-    const developmentCard = page.locator('div.card').filter({ hasText: 'Development Challenge' }).first();
-    await developmentCard.click();
-    await page.waitForTimeout(500);
+    await page.getByTestId('challenge-development').click();
     await page.getByRole('button', { name: 'Proceed to Submission' }).click();
 
     // Try to submit empty form
