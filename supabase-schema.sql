@@ -24,14 +24,17 @@ CREATE INDEX IF NOT EXISTS idx_submissions_submitted_at ON submissions(submitted
 ALTER TABLE submissions ENABLE ROW LEVEL SECURITY;
 
 -- Create policy to allow inserts from anyone (for the submission form)
+-- This allows both authenticated and anonymous users to insert
 CREATE POLICY "Allow public inserts" ON submissions
   FOR INSERT
+  TO anon, authenticated
   WITH CHECK (true);
 
 -- Create policy to allow reads only for authenticated users (assessors)
 CREATE POLICY "Allow authenticated reads" ON submissions
   FOR SELECT
-  USING (auth.role() = 'authenticated');
+  TO authenticated
+  USING (true);
 
 -- Add comment to table
 COMMENT ON TABLE submissions IS 'Stores assessment submissions from candidates';
